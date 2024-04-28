@@ -1,0 +1,26 @@
+<ng-container *ngIf="job">
+  <div class="custom-job-container">
+
+    <!--image-->
+    <img [src]="job.companyLogo" [alt]="job.companyName" class="custom-image">
+
+    <div class="custom-container-without-star" [ngClass]="{'custom-container-with-star': showStar}">
+      <!--title company and reference-->
+      <div class="custom-content-container">
+        <div>
+          <h4 class="m-0">{{job.title}}</h4>
+        </div>
+        <div>Company: {{job.companyName}} - Reference: {{job.reference}}</div>
+      </div>
+
+      <!--star-->
+      <ng-container *ngIf="showStar">
+        <div class="custom-star-container">
+          <span class="icon-star" style="background-color: red"></span>
+        </div>
+      </ng-container>
+    </div>
+
+  </div>
+</ng-container>
+
