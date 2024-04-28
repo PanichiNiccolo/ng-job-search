@@ -1,3 +1,26 @@
 <h1 class="text-center mt-4">Find your Job</h1>
 
-<p>home works!</p>
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <ul class="nav nav-pills">
+
+      <li role="presentation" class="nav-item custom-pill">
+        <a class="nav-link"
+           [routerLink]="['jobs']"
+           routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+          Jobs
+        </a>
+      </li>
+
+      <li role="presentation" class="nav-item custom-pill shadow-sm">
+        <a class="nav-link" [routerLink]="['favorites']" routerLinkActive="active">
+          Favorites
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
