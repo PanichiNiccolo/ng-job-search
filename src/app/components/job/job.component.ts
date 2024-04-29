@@ -2,12 +2,14 @@ import {Component, Input} from '@angular/core';
 import {JobMinimalDTO} from "../../models/job-minimal.model";
 import {CommonModule} from "@angular/common";
 import {LocalStorageService} from "../../services/local-storage.service";
+import {StarHighlightDirective} from "../../directives/star-highlight.directive";
 
 @Component({
   selector: 'app-job',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    StarHighlightDirective
   ],
   templateUrl: './job.component.html',
   styleUrl: './job.component.css'
