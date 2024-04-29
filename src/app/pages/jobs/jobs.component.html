@@ -6,6 +6,6 @@
 
 <ng-container *ngIf="jobList">
   <div *ngFor="let job of jobList">
-    <app-job [job]="job"></app-job>
+    <app-job [job]="job" [showStar]="true" [isFavorite]="getIsFavoriteJob(job)"></app-job>
   </div>
 </ng-container>

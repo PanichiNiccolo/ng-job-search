@@ -5,6 +5,7 @@ import {JobMinimalDTO} from "../../models/job-minimal.model";
 import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 import {CommonModule, NgIf} from "@angular/common";
 import {JobComponent} from "../../components/job/job.component";
+import {LocalStorageService} from "../../services/local-storage.service";
 
 @Component({
   selector: 'app-jobs',
@@ -21,7 +22,8 @@ export class JobsComponent implements OnInit{
 
   jobList: JobMinimalDTO[] = [];
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private localStorageService: LocalStorageService) {
   }
 
   ngOnInit(): void {
@@ -33,5 +35,9 @@ export class JobsComponent implements OnInit{
       },
       error: (err) => console.log("Error during retrieving jobs list: " + err),
     });
+  }
+
+  protected getIsFavoriteJob(job: JobMinimalDTO): boolean {
+    return this.localStorageService.checkIfJobIsFavorite(job);
   }
 }
