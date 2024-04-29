@@ -16,7 +16,7 @@
       <!--star-->
       <ng-container *ngIf="showStar">
         <div class="custom-star-container">
-          <span class="icon-star" style="background-color: red"></span>
+          <span (click)="manageFavorite()" class="icon-star" [ngStyle]="{backgroundColor: isFavorite ? 'yellow' : 'black'}"></span>
         </div>
       </ng-container>
     </div>
