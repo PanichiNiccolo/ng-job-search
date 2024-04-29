@@ -36,6 +36,10 @@ export class StarHighlightDirective implements OnInit, OnChanges{
     this.cursor = 'auto';
   }
 
+  @HostListener('mousedown') mouseDown(): void {
+    this.backgroundColor = 'blue';
+  }
+
   private getColor(): string {
     if (this.isFavorite) {
       return this.highlightColor;
