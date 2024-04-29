@@ -57,6 +57,16 @@ export class LocalStorageService {
     return false;
   }
 
+  public getFavoriteJobList(): JobMinimalDTO[] | null {
+    const localStorageData: string | null = localStorage.getItem(this.FAVORITE_JOB_LIST);
+
+    if (localStorageData != null) {
+      return JSON.parse(localStorageData);
+    }
+
+    return null;
+  }
+
   private saveFavoriteJobList(favoriteJobList: JobMinimalDTO[]): void {
     localStorage.setItem(this.FAVORITE_JOB_LIST, JSON.stringify(favoriteJobList));
   }
