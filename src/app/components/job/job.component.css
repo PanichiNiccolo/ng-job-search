@@ -38,6 +38,6 @@
   justify-content: center;
 }
 
-:host ::ng-deep .icon-star:active {
+/*:host ::ng-deep .icon-star:active {
   background-color: green !important;
-}
+}*/
