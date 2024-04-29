@@ -2,8 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {JobListComponent} from "../../components/job-list/job-list.component";
 import {ActivatedRoute, Data} from "@angular/router";
 import {JobMinimalDTO} from "../../models/job-minimal.model";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
-import {CommonModule, NgIf} from "@angular/common";
+import {CommonModule} from "@angular/common";
 import {JobComponent} from "../../components/job/job.component";
 import {LocalStorageService} from "../../services/local-storage.service";
 

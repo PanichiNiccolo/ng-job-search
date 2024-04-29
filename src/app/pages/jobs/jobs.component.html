@@ -1,11 +1,7 @@
-<p>jobs works!</p>
-
-<br>
-<br>
-<br>
-
 <ng-container *ngIf="jobList">
-  <div *ngFor="let job of jobList">
+  <div *ngFor="let job of jobList; first as isFirst; last as isLast"
+       [ngStyle]="{'margin-top': isFirst ? '1rem' : 0, 'margin-bottom': isLast ? '1rem' : 0}"
+       class="py-1">
     <app-job [job]="job" [showStar]="true" [isFavorite]="getIsFavoriteJob(job)"></app-job>
   </div>
 </ng-container>
