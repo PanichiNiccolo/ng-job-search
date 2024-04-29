@@ -1,1 +1,10 @@
-<p>favorites works!</p>
+<ng-container *ngIf="favoriteJobList && favoriteJobList.length > 0; else elseBlock">
+  <div *ngFor="let job of favoriteJobList; first as isFirst; last as isLast"
+       [ngStyle]="{'margin-top': isFirst ? '1rem' : 0, 'margin-bottom': isLast ? '1rem' : 0}"
+       class="py-1">
+    <app-job [job]="job" [showStar]="false"></app-job>
+  </div>
+</ng-container>
+<ng-template #elseBlock>
+  <div class="text-center mt-5">No favorite selected</div>
+</ng-template>
