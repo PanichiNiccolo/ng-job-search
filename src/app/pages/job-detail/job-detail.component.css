@@ -1,0 +1,56 @@
+.custom-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 6rem;
+}
+
+/*header section*/
+
+.header-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.custom-image {
+  width: 130px;
+  height: 130px;
+}
+
+.title-types-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title-detail-container {
+  display: flex;
+  width: 100%;
+}
+
+.types-detail-container {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/*chip*/
+.custom-span-detail {
+  background-color: royalblue;
+  color: white;
+  border-radius: 10px;
+  padding: 0 0.25rem;
+}
+
+/*body section*/
+.standard-info {
+  display: flex;
+  width: 100%;
+}
+
+.description-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

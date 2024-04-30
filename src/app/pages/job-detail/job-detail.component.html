@@ -1,1 +1,66 @@
-<p>job-detail works!</p>
+<ng-container *ngIf="job">
+  <div class="custom-detail-container">
+
+    <!--back button-->
+    <div>
+      <button type="button" [routerLink]="['home/jobs']" class="btn btn-outline-dark btn-sm">
+        <span class="icon-home"></span>
+        Back
+      </button>
+    </div>
+
+    <!--header section-->
+    <div class="header-detail">
+      <!--image-->
+      <img [src]="job.companyLogo" [alt]="job.companyName" class="custom-image">
+
+      <!--title + types & industries-->
+      <div class="title-types-detail-container">
+        <!--title-->
+        <div class="title-detail-container">
+          <h1 class="m-0">
+            {{job.title}}
+          </h1>
+        </div>
+
+        <!--types & industries-->
+        <div class="types-detail-container">
+          <!--types-->
+          <ng-container *ngIf="job && job.types && job.types.length > 0">
+            <span *ngFor="let type of job.types" [innerHTML]="type" class="custom-span-detail"></span>
+          </ng-container>
+
+          <!--industries-->
+          <ng-container *ngIf="job && job.industries && job.industries.length > 0">
+            <span *ngFor="let industry of job.industries" [innerHTML]="industry" class="custom-span-detail"></span>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <!--publish date-->
+    <div class="standard-info">
+      <b>Publish date: &nbsp;</b>
+      <span [innerHTML]="job.publishDate | date: 'shortDate'"></span>
+    </div>
+
+    <!--location-->
+    <div class="standard-info">
+      <b>Location: &nbsp;</b>
+      <span [innerHTML]="job.location"></span>
+    </div>
+
+    <!--reference-->
+    <div class="standard-info">
+      <b>Reference: &nbsp;</b>
+      <span [innerHTML]="job.reference"></span>
+    </div>
+
+    <!--description-->
+    <div class="description-info">
+      <b>Description:</b>
+      <span [innerHTML]="job.description"></span>
+    </div>
+
+  </div>
+</ng-container>
