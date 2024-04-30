@@ -48,23 +48,24 @@ export class LocalStorageService {
   public checkIfJobIsFavorite(job: JobMinimalDTO): boolean {
     const localStorageData: string | null = localStorage.getItem(this.FAVORITE_JOB_LIST);
 
-    if (localStorageData != null) {
-      let favoriteJobList: JobMinimalDTO[] = JSON.parse(localStorageData);
-
-      return  favoriteJobList.some((favoriteJob: JobMinimalDTO) => favoriteJob.id === job.id);
+    if (localStorageData == null) {
+      return false;
     }
 
-    return false;
+    let favoriteJobList: JobMinimalDTO[] = JSON.parse(localStorageData);
+    return  favoriteJobList.some((favoriteJob: JobMinimalDTO) => favoriteJob.id === job.id);
   }
 
-  public getFavoriteJobList(): JobMinimalDTO[] | null {
+  public getFavoriteJobList(): JobMinimalDTO[] {
     const localStorageData: string | null = localStorage.getItem(this.FAVORITE_JOB_LIST);
 
+    let favoriteJobList: JobMinimalDTO[] = [];
+
     if (localStorageData != null) {
-      return JSON.parse(localStorageData);
+      favoriteJobList = JSON.parse(localStorageData);
     }
 
-    return null;
+    return favoriteJobList;
   }
 
   private saveFavoriteJobList(favoriteJobList: JobMinimalDTO[]): void {
