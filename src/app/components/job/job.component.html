@@ -8,7 +8,11 @@
       <!--title company and reference-->
       <div class="custom-content-container">
         <div>
-          <h4 class="m-0">{{job.title}}</h4>
+          <h4 class="m-0">
+            <a [routerLink]="['home/detail', job.id]" class="custom-link" appLinkHighlight>
+              {{job.title}}
+            </a>
+          </h4>
         </div>
         <div>Company: {{job.companyName}} - Reference: {{job.reference}}</div>
       </div>
