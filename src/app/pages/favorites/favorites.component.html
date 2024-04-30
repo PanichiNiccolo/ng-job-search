@@ -1,4 +1,4 @@
-<ng-container *ngIf="favoriteJobList && favoriteJobList.length > 0; else elseBlock">
+<ng-container *ngIf="favoriteJobList.length > 0; else elseBlock">
   <div *ngFor="let job of favoriteJobList; first as isFirst; last as isLast"
        [ngStyle]="{'margin-top': isFirst ? '1rem' : 0, 'margin-bottom': isLast ? '1rem' : 0}"
        class="py-1">

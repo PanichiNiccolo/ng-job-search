@@ -16,7 +16,7 @@ import {CommonModule} from "@angular/common";
 })
 export class FavoritesComponent implements OnInit{
 
-  favoriteJobList: JobMinimalDTO[] | undefined | null;
+  favoriteJobList: JobMinimalDTO[] = [];
 
   constructor(private localStorageService: LocalStorageService) {
   }
