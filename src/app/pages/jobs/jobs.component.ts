@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {JobListComponent} from "../../components/job-list/job-list.component";
 import {ActivatedRoute, Data} from "@angular/router";
 import {JobMinimalDTO} from "../../models/job-minimal.model";
 import {CommonModule} from "@angular/common";
@@ -11,7 +10,6 @@ import {LocalStorageService} from "../../services/local-storage.service";
   standalone: true,
   imports: [
     CommonModule,
-    JobListComponent,
     JobComponent
   ],
   templateUrl: './jobs.component.html',
