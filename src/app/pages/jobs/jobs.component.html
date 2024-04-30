@@ -1,4 +1,4 @@
-<ng-container *ngIf="jobList">
+<ng-container *ngIf="jobList.length > 0">
   <div *ngFor="let job of jobList; first as isFirst; last as isLast"
        [ngStyle]="{'margin-top': isFirst ? '1rem' : 0, 'margin-bottom': isLast ? '1rem' : 0}"
        class="py-1">
