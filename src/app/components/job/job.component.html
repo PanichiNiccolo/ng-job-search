@@ -2,7 +2,7 @@
   <div class="custom-job-container">
 
     <!--image-->
-    <img [src]="job.companyLogo" [alt]="job.companyName" class="custom-image">
+    <img [ngSrc]="job.companyLogo" width="100" height="100" [alt]="job.companyName">
 
     <div class="custom-container-without-star" [ngClass]="{'custom-container-with-star': showStar}">
       <!--title company and reference-->
@@ -14,7 +14,13 @@
             </a>
           </h4>
         </div>
-        <div>Company: {{job.companyName}} - Reference: {{job.reference}}</div>
+        <div>
+          Company:
+          <span [innerHTML]="job.companyName"></span>
+          -
+          Reference:
+          <span [innerHTML]="job.reference"></span>
+        </div>
       </div>
 
       <!--star-->

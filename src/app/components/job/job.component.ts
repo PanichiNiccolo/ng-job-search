@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {JobMinimalDTO} from "../../models/job-minimal.model";
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {LocalStorageService} from "../../services/local-storage.service";
 import {StarHighlightDirective} from "../../directives/star-highlight.directive";
 import {RouterLink} from "@angular/router";
@@ -12,6 +12,7 @@ import {RouterLink} from "@angular/router";
     CommonModule,
     StarHighlightDirective,
     RouterLink,
+    NgOptimizedImage
   ],
   templateUrl: './job.component.html',
   styleUrl: './job.component.css'

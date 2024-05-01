@@ -13,11 +13,6 @@
   gap: 0.5rem;
 }
 
-.custom-image {
-  width: 130px;
-  height: 130px;
-}
-
 .title-types-detail-container {
   display: flex;
   flex-direction: column;

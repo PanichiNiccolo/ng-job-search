@@ -1,14 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Data, RouterLink} from "@angular/router";
 import {JobDTO} from "../../models/job.model";
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-job-detail',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink
+    RouterLink,
+    NgOptimizedImage
   ],
   templateUrl: './job-detail.component.html',
   styleUrl: './job-detail.component.css'
