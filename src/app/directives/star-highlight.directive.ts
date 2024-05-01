@@ -36,6 +36,18 @@ export class StarHighlightDirective implements OnInit, OnChanges{
     this.cursor = 'auto';
   }
 
+  /**
+   * The :active selector is used to select and style the active link.
+   * A link becomes active when you click on it.
+   *
+   * The onmousedown event occurs when a user presses a mouse button over an HTML element.
+   *
+   * The requirement asks to use the :active css class,
+   * I preferred to use the mousedown event to be able to create my custom directive and separate the :hover and :active
+   * operations in a more clearly defined way.
+   *
+   * However, I left the :active class as a comment in the job.component.css file
+   */
   @HostListener('mousedown') mouseDown(): void {
     this.backgroundColor = 'blue';
   }
