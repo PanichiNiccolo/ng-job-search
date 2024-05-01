@@ -40,6 +40,11 @@
 
 .custom-link {
   color: #212529;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  text-decoration: underline;
 }
 
 /*:host ::ng-deep .icon-star:active {

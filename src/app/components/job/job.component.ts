@@ -4,7 +4,6 @@ import {CommonModule} from "@angular/common";
 import {LocalStorageService} from "../../services/local-storage.service";
 import {StarHighlightDirective} from "../../directives/star-highlight.directive";
 import {RouterLink} from "@angular/router";
-import {LinkHighlightDirective} from "../../directives/link-highlight.directive";
 
 @Component({
   selector: 'app-job',
@@ -13,7 +12,6 @@ import {LinkHighlightDirective} from "../../directives/link-highlight.directive"
     CommonModule,
     StarHighlightDirective,
     RouterLink,
-    LinkHighlightDirective
   ],
   templateUrl: './job.component.html',
   styleUrl: './job.component.css'
