@@ -26,7 +26,7 @@
       <!--star-->
       <ng-container *ngIf="showStar">
         <div class="custom-star-container">
-          <span (click)="manageFavorite()" class="icon-star" [appStarHighlight]="'yellow'" [isFavorite]="isFavorite"></span>
+          <span (click)="manageFavorite()" class="icon-star" [appStarHighlight]="'yellow'" [isFavorite]="isFavorite" [id]="'star-' + job.id"></span>
         </div>
       </ng-container>
     </div>
