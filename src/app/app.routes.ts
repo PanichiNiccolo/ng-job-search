@@ -32,5 +32,3 @@ export const routes: Routes = [
     redirectTo: 'home/jobs',
   },
 ];
-
-//TODO: metti ptima il dettaglio con il job/id e poi il job

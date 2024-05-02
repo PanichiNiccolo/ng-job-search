@@ -10,13 +10,11 @@ import {JobDTO} from "../models/job.model";
 export class JobService {
 
   private readonly JOBS_API_PATH: string = 'jobs';
-  options = {};
-  //TODO: eliminare options perchè non necessarie
 
   constructor(private httpClient: HttpClient) { }
 
   getJobList(): Observable<JobMinimalDTO[]> {
-    return this.httpClient.get<JobMinimalDTO[]>(this.JOBS_API_PATH, this.options);
+    return this.httpClient.get<JobMinimalDTO[]>(this.JOBS_API_PATH);
   }
 
   getJobById(id: number): Observable<JobDTO> {
